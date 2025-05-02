@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Code Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="leftPart">
+        <div class="content">
+            <div class="label-row">
+                <label>HTML</label>
+                <button onclick="copyCode('htmlCode', this)">Copy</button>
+            </div>
+            <textarea id="htmlCode" oninput="runCode()"></textarea>
+        </div>
+
+        <div class="content">
+            <div class="label-row">
+                <label>CSS</label>
+                <button onclick="copyCode('cssCode', this)">Copy</button>
+            </div>
+            <textarea id="cssCode" oninput="runCode()"></textarea>
+        </div>
+
+        <div class="content">
+            <div class="label-row">
+                <label>JavaScript</label>
+                <button onclick="copyCode('jsCode', this)">Copy</button>
+            </div>
+            <textarea id="jsCode" oninput="runCode()"></textarea>
+        </div>
+    </div>
+
+    <div class="rightPart">
+        <label>Output</label>
+        <iframe id="output"></iframe>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
